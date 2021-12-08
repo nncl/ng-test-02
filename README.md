@@ -1,5 +1,7 @@
 # NgTest1
 
+Project course. That's why the Angular version isn't updated.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.1.
 
 ## Development server
