@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-photo-frame',
@@ -6,4 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: [ './photo-frame.component.scss' ]
 })
 export class PhotoFrameComponent {
+  @Output() liked: EventEmitter<void> = new EventEmitter<void>();
+
+  @Input() description = '';
+  @Input() src = '';
+  @Input() likes = 0;
+
+  public like(): void {
+    this.liked.emit();
+  }
 }
