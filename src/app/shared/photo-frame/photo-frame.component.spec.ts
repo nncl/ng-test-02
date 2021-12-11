@@ -48,4 +48,13 @@ describe(`${PhotoFrameComponent.name}`, () => {
 
       expect(times).toBe(2);
     }));
+
+  it(`Should display number of likes when (@Output likes) is incremented`, () => {
+    fixture.detectChanges();
+    component.likes++;
+    fixture.detectChanges();
+
+    const element: HTMLElement = fixture.nativeElement.querySelector('.like-counter');
+    expect(element.textContent.trim()).toBe('1');
+  });
 });
