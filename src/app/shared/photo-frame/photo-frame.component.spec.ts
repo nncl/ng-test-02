@@ -49,7 +49,7 @@ describe(`${PhotoFrameComponent.name}`, () => {
       expect(times).toBe(2);
     }));
 
-  it(`Should display number of likes when (@Output likes) is incremented`, () => {
+  it(`(D) Should display number of likes when (@Output likes) is incremented`, () => {
     fixture.detectChanges();
     component.likes++;
     fixture.detectChanges();
@@ -58,7 +58,7 @@ describe(`${PhotoFrameComponent.name}`, () => {
     expect(element.textContent.trim()).toBe('1');
   });
 
-  it(`Should update aria label when (@Input like) is incremented`, () => {
+  it(`(D) Should update aria label when (@Input like) is incremented`, () => {
     fixture.detectChanges();
     component.likes++;
     fixture.detectChanges();
@@ -66,7 +66,7 @@ describe(`${PhotoFrameComponent.name}`, () => {
     expect(element.getAttribute('aria-label')).toBe('1: people liked');
   });
 
-  it(`Should have aria label with 0 (@Input likes)`, () => {
+  it(`(D) Should have aria label with 0 (@Input likes)`, () => {
     fixture.detectChanges();
     const element: HTMLElement = fixture.nativeElement.querySelector('span');
     expect(element.getAttribute('aria-label')).toBe('0: people liked');
