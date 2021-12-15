@@ -71,4 +71,19 @@ describe(`${PhotoFrameComponent.name}`, () => {
     const element: HTMLElement = fixture.nativeElement.querySelector('span');
     expect(element.getAttribute('aria-label')).toBe('0: people liked');
   });
+
+  it(`(D) Should display image and description when bound to properties`, () => {
+    const description = 'My custom description';
+    const src = 'https://dummyimage.com/200';
+
+    component.description = description;
+    component.src = src;
+
+    fixture.detectChanges();
+
+    const img: HTMLImageElement = fixture.nativeElement.querySelector('img');
+
+    expect(img.getAttribute('alt')).toBe(description);
+    expect(img.getAttribute('src')).toBe(src);
+  });
 });
