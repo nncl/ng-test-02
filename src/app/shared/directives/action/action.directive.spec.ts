@@ -22,7 +22,7 @@ describe(ActionDirective.name, () => {
     const event = new KeyboardEvent('keyup', { key: 'enter' });
     divEl.dispatchEvent(event);
 
-    expect(component.hasEvent()).toBe(true);
+    expect(component.hasEvent()).toBeTrue();
   });
 
   it(`(D) (@Output appAction) should emit event with payload when clicked`, () => {
@@ -30,7 +30,7 @@ describe(ActionDirective.name, () => {
     const event = new Event('click'); // Or divEl.click();
     divEl.dispatchEvent(event);
 
-    expect(component.hasEvent()).toBe(true);
+    expect(component.hasEvent()).toBeTrue();
   });
 });
 
