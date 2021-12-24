@@ -32,6 +32,21 @@ describe(ActionDirective.name, () => {
 
     expect(component.hasEvent()).toBeTrue();
   });
+
+  // Example only, it's better handle divided
+  it(`(D) (@Output appAction) should emit event with payload when clicked or enter key pressed`, () => {
+    const divEl: HTMLElement = fixture.nativeElement.querySelector('.dummy-component');
+
+    const clickEvent = new Event('click');
+    const keyboardEvent = new KeyboardEvent('keyup', { key: 'enter' });
+
+    divEl.dispatchEvent(clickEvent);
+    expect(component.hasEvent()).withContext('Click event').toBeTrue();
+
+    component.clear();
+    divEl.dispatchEvent(keyboardEvent);
+    expect(component.hasEvent()).withContext('Keyboard event "keyup"').toBeTrue();
+  });
 });
 
 @Component({
@@ -47,5 +62,9 @@ class ActionDirectiveTestComponent {
 
   public hasEvent(): boolean {
     return !!this.event;
+  }
+
+  public clear(): void {
+    this.event = null;
   }
 }
