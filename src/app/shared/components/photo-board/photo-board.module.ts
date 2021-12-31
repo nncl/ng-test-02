@@ -10,7 +10,9 @@ import { PhotoBoardService } from './services/photo-board.service';
     CommonModule,
     PhotoFrameModule
   ],
-  exports: [],
+  exports: [
+    PhotoBoardComponent
+  ],
   providers: [ PhotoBoardService ]
 })
 export class PhotoBoardModule {
