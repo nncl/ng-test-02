@@ -33,6 +33,7 @@ describe(PhotoBoardService.name, () => {
       done();
     });
 
+    // The controller is who submit the upon request
     httpController
       .expectOne(mockData.api)
       .flush(mockData.data);
