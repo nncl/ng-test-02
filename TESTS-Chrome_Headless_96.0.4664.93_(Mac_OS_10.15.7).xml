@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<testsuite name="Chrome Headless 96.0.4664.93 (Mac OS 10.15.7)" package="" timestamp="2021-12-15T01:43:46" id="0" hostname="Mac-mini-de-DIN.local" tests="15" errors="0" failures="0" time="0.136">
+  <properties>
+    <property name="browser.fullName" value="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/96.0.4664.93 Safari/537.36"/>
+  </properties>
+  <testcase name="LikeWidgetComponent Should create component" time="0.072" classname="Chrome_Headless_96_0_4664_93_(Mac_OS_10_15_7).LikeWidgetComponent"/>
+  <testcase name="LikeWidgetComponent Should auto-generate ID during ngOnInit when (@Input id) is not assigned" time="0.011" classname="Chrome_Headless_96_0_4664_93_(Mac_OS_10_15_7).LikeWidgetComponent"/>
+  <testcase name="LikeWidgetComponent Should NOT auto-generate ID during ngOnInit when (@Input id) is assigned" time="0.005" classname="Chrome_Headless_96_0_4664_93_(Mac_OS_10_15_7).LikeWidgetComponent"/>
+  <testcase name="LikeWidgetComponent #like&#xA;    should trigger (@Output liked) when called" time="0.008" classname="Chrome_Headless_96_0_4664_93_(Mac_OS_10_15_7).LikeWidgetComponent"/>
+  <testcase name="PhotoFrameComponent (D) Should display number of likes when (@Output likes) is incremented" time="0.007" classname="Chrome_Headless_96_0_4664_93_(Mac_OS_10_15_7).PhotoFrameComponent"/>
+  <testcase name="PhotoFrameComponent (D) Should update aria label when (@Input like) is incremented" time="0.005" classname="Chrome_Headless_96_0_4664_93_(Mac_OS_10_15_7).PhotoFrameComponent"/>
+  <testcase name="PhotoFrameComponent (D) Should have aria label with 0 (@Input likes)" time="0.004" classname="Chrome_Headless_96_0_4664_93_(Mac_OS_10_15_7).PhotoFrameComponent"/>
+  <testcase name="PhotoFrameComponent (D) Should display image and description when bound to properties" time="0.006" classname="Chrome_Headless_96_0_4664_93_(Mac_OS_10_15_7).PhotoFrameComponent"/>
+  <testcase name="PhotoFrameComponent Should create component" time="0.005" classname="Chrome_Headless_96_0_4664_93_(Mac_OS_10_15_7).PhotoFrameComponent"/>
+  <testcase name="PhotoFrameComponent #like&#xA;  should trigger (@Output liked) twice when called outside debounce time" time="0.006" classname="Chrome_Headless_96_0_4664_93_(Mac_OS_10_15_7).PhotoFrameComponent"/>
+  <testcase name="PhotoFrameComponent #like&#xA;  should trigger (@Output liked) once when called multiple times within debounce time" time="0.005" classname="Chrome_Headless_96_0_4664_93_(Mac_OS_10_15_7).PhotoFrameComponent"/>
+  <testcase name="UniqueIdService #getNumberOfGeneratedUniqueIds&#xA;    should return the number of generatedIds when called" time="0.001" classname="Chrome_Headless_96_0_4664_93_(Mac_OS_10_15_7).UniqueIdService"/>
+  <testcase name="UniqueIdService #generateUniqueIdWithPrefix&#xA;    should throw when called with empty" time="0" classname="Chrome_Headless_96_0_4664_93_(Mac_OS_10_15_7).UniqueIdService"/>
+  <testcase name="UniqueIdService #generateUniqueIdWithPrefix&#xA;    should generate id when called with prefix" time="0" classname="Chrome_Headless_96_0_4664_93_(Mac_OS_10_15_7).UniqueIdService"/>
+  <testcase name="UniqueIdService #generateUniqueIdWithPrefix&#xA;    should not generate duplicate IDs when called multiple times" time="0.001" classname="Chrome_Headless_96_0_4664_93_(Mac_OS_10_15_7).UniqueIdService"/>
+  <system-out>
+    <![CDATA[
+]]>
+  </system-out>
+  <system-err/>
+</testsuite>
