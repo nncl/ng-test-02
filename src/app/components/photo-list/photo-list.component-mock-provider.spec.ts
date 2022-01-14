@@ -3,9 +3,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { PhotoListModule } from './photo-list.module';
 import { HttpClientModule } from '@angular/common/http';
 import { PhotoBoardService } from '../../shared/components/photo-board/services/photo-board.service';
-import { buildPhotoList } from '../../shared/components/photo-board/test/build-photo-list';
-import { Observable, of } from 'rxjs';
-import { Photo } from '../../shared/components/photo-board/interfaces/photo';
+import { PhotoBoardMockService } from '../../shared/components/photo-board/services/photo-board-mock.service';
 
 describe(PhotoListComponent.name + 'Mock Provider', () => {
   let fixture: ComponentFixture<PhotoListComponent>;
@@ -17,11 +15,7 @@ describe(PhotoListComponent.name + 'Mock Provider', () => {
       providers: [
         {
           provide: PhotoBoardService,
-          useValue: {
-            getPhotos(): Observable<Photo[]> {
-              return of(buildPhotoList());
-            }
-          }
+          useClass: PhotoBoardMockService
         }
       ]
     }).compileComponents();
